@@ -1,0 +1,196 @@
+.title-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .title-box h2 {
+    color: #333;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+  }
+  .title-box .title-box-bottom {
+    width: 35px;
+    height: 2px;
+    background-color: #c7000b;
+    margin: 15px auto;
+    margin-bottom: 40px;
+  }
+  .main1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .main1 .main1-padding {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .img-box {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .img-box-list img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+  }
+
+  .img-box-list img.active {
+    transform: scale(1.09);
+  }
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#eeeeee00, #111111);
+    color: #ffffff;
+    opacity: 0;
+  }
+  .img-box:hover .mask {
+    opacity: 0.8;
+  }
+  .img-box-list:hover .text-box {
+    transform: translateY(-60px);
+    transition: all 0.5s;
+  }
+  html:hover .text-box {
+    transform: translateY(8px);
+    transition: all 0.5s;
+  }
+  .main1 .text-box {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    z-index: 4;
+    padding: 25px 30px;
+    bottom: -50px;
+    font-size: 16px;
+  }
+  .main1 .category-name {
+    font-weight: bold;
+  }
+  .img-box-mask {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 -35px;
+    background-color: red;
+  }
+
+  /* 移动端轮播图 */
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  }
+  .swiper-pagination-bullet {
+    width: 25px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 0;
+    opacity: 0.5;
+    background: #ffffff;
+  }
+  .swiper-pagination-bullet-active {
+    background: #c6a771;
+  }
+  .banner {
+    width: 100%;
+  }
+
+  /* 移动端轮播图 */
+  .swiper-container-small {
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .small-img-box {
+    position: relative;
+  }
+  .small-img-box .small-img-box-wenzi {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    z-index: 4;
+    padding: 25px 30px;
+    bottom: 10px;
+    font-size: 18px;
+  }
+  .small-img-box .small-img-box-wenzi .category-name {
+    font-weight: bold;
+  }
+  .main1-small-padding {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .img-box-list-small{
+    margin-bottom: 20px;
+    margin-top: 12px;
+  }
+  
+  .img-box-small {
+    width: 100%;
+    overflow: hidden;
+  }
+  .img-box-small img {
+    width: 100%;
+    background-size: 100% 100%;
+  }
+  .text-box-small {
+    background-color: #f5f5f5;
+    height: 120px;
+  }
+  .text-box-small .cagegory-small {
+    color: #666666;
+    font-size: 0.875em;
+    line-height: 1.8em;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+  .text-box-small .js-text-dot-cn {
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    .main .main1 {
+      display: block;
+    }
+    .main .main1-small {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    .main .main1 {
+      display: none;
+    }
+    .main .main1-small {
+      display: block;
+    }
+  }

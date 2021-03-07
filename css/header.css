@@ -1,0 +1,408 @@
+/**
+ * header.css Header部分样式
+ * @author: 徐梦宇
+ * @desc  : 包含`顶部黑边`和`顶部导航栏`，以及他们的移动端适配样式
+ */
+
+/* header {} */
+
+/* **********************顶部黑边********************** */
+header .black-space {
+  height: 25px;
+  background-color: var(--black-bgc);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 25px;
+  color: var(--font-white);
+
+  position: relative;
+}
+
+header .black-space p {
+  margin-bottom: 0;
+
+  cursor: pointer;
+}
+
+header .black-space > div {
+  padding-left: 1em;
+}
+
+header .black-space > div > p {
+  padding-left: 1em;
+  padding-right: 1em;
+
+  transition: all 0.4s;
+}
+
+header .black-space > div > p.active {
+  background-color: var(--white-bgc);
+
+  color: var(--font-secondry-color);
+
+  transition: all 0.4s;
+}
+
+header .black-space > div i {
+  transform: translateX(-3px);
+}
+/* **********************顶部黑边********************** */
+
+/* **********************顶部内容********************** */
+header .black-content {
+  width: 100%;
+  background-color: var(--white-bgc);
+
+  font-size: var(--font-root-size);
+}
+header .black-content > div {
+  display: flex;
+  height: 0;
+
+  overflow: hidden;
+
+  transition: all 0.4s;
+}
+header .black-content > div > div {
+  padding: 40px 50px 40px 0;
+}
+
+header .black-content .title {
+  display: inline-block;
+  margin-bottom: 1em;
+  border-bottom: 1px solid transparent;
+
+  color: var(--font-primary-color);
+  font-size: 0.95em;
+
+  cursor: pointer;
+
+  transition: all 0.4s;
+}
+
+header .black-content .title > i {
+  transform: translateY(-2px);
+  transition: all 0.4s;
+}
+
+header .black-content .title:hover {
+  border-bottom-color: #333;
+
+  transition: all 0.4s;
+}
+header .black-content .title:hover > i {
+  color: var(--font-red);
+
+  transform: translateX(0.4em) translateY(-2px);
+  transition: all 0.4s;
+}
+
+/* 当前处于active状态的样式 */
+header .black-content .title.active {
+  font-weight: bold;
+
+  cursor: default;
+}
+header .black-content .title.active > i {
+  color: var(--font-red);
+}
+header .black-content .title.active:hover {
+  border-bottom-color: transparent;
+}
+
+header .black-content .title.active:hover > i {
+  transform: translateY(-2px);
+}
+
+header .black-content .desc {
+  color: var(--font-secondry-color);
+  font-size: 0.825em;
+
+  cursor: default;
+}
+
+/* 区域/语言 */
+header .black-content .area {
+  flex-direction: column;
+}
+header .black-content .title-h3 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  color: var(--font-primary-color);
+  font-size: var(--font-h3-size);
+  font-weight: bold;
+
+  cursor: default;
+}
+header .black-content ul li {
+  float: left;
+  width: 20%;
+  height: 3em;
+  border-bottom: 1px solid transparent;
+
+  color: var(--font-secondry-color);
+}
+
+header .black-content ul li.current {
+  color: var(--black-bgc);
+}
+
+header .black-content ul li i {
+  color: var(--font-red);
+
+  transform: translateY(-2px);
+}
+
+header .black-content ul li span {
+  border-bottom: 1px solid transparent;
+
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+header .black-content ul li span:hover {
+  color: var(--black-bgc);
+  border-bottom-color: #333;
+  transition: all 0.4s;
+}
+
+header .black-content > div.show {
+  height: 173px;
+  transition: all 0.4s;
+}
+header .black-content > .area.show {
+  height: 416px;
+  transition: all 0.4s;
+}
+
+/* 宽度低于1025px时隐藏 */
+@media (max-width: 1025px) {
+  header .black-space {
+    display: none;
+  }
+  header .black-content {
+    display: none;
+  }
+}
+/* **********************顶部内容********************** */
+
+/* **********************导航栏********************** */
+header .navbar {
+  height: 78px;
+  border: 1px solid #e6e6e6;
+}
+header .navbar .logo {
+  width: 133px;
+
+  cursor: pointer;
+}
+header .navbar .logo img {
+  width: 100%;
+  height: auto;
+}
+
+header .navbar nav,
+header .navbar .search {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: var(--font-nav-size);
+  color: var(--font-primary-color);
+}
+
+header .navbar nav {
+  width: 40em;
+  align-items: center;
+
+  transform: scaleY(1);
+  transition: all 0.4s;
+}
+
+header .navbar nav.hidden {
+  transform: scaleY(0);
+  transition: all 0.4s;
+}
+
+header .navbar nav > div,
+header .navbar .search > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+
+  cursor: pointer;
+
+  transition: all 0.4s;
+}
+
+header .navbar nav > div:hover {
+  border-bottom-color: var(--font-red);
+
+  transition: all 0.4s;
+}
+
+header .navbar .search {
+  width: 8em;
+
+  position: relative;
+}
+
+header .navbar .search .online-shop {
+  transform: scaleY(1);
+  transition: all 0.4s;
+}
+
+header .navbar .search .online-shop.hidden {
+  transform: scaleY(0);
+  transition: all 0.4s;
+}
+
+header .navbar .search .online-buy {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+header .navbar .search .online-buy.hidden {
+  display: none;
+}
+
+header .navbar .search .online-buy > div {
+  width: 140px;
+  padding: 5px 6px;
+  padding-left: 20px;
+  border: 1px solid var(--gray-color);
+  background-color: #fff;
+
+  color: var(--font-secondry-color);
+
+  transition: all 0.4s;
+}
+header .navbar .search .online-buy > div:hover {
+  color: var(--font-primary-color);
+
+  transition: all 0.4s;
+}
+header .navbar .search .online-buy > div > i {
+  transform: translateX(-4px);
+}
+
+header .navbar .search .online-buy > div:first-child {
+  border-bottom: none;
+}
+
+header .navbar .search .search-input {
+  width: 300px;
+  line-height: 45px;
+
+  position: absolute;
+  left: -200%;
+
+  transition: all 0.4s;
+}
+header .navbar .search .search-input.hidden {
+  left: 200%;
+
+  transition: all 0.4s;
+}
+
+header .navbar .search .search-input input {
+  width: 100%;
+  padding-left: 1em;
+  border: 1px solid var(--font-secondry-color);
+}
+
+header .navbar .search .search-button.hidden {
+  display: none;
+}
+
+header .navbar .m-nav {
+  display: none;
+  width: 4em;
+  justify-content: space-between;
+}
+
+/* 宽度低于1025px时切换为移动端nav */
+@media (max-width: 1025px) {
+  header .navbar {
+    box-shadow: 1px 1px 6px #3b3b3b52;
+  }
+  header .navbar nav,
+  header .navbar .search {
+    display: none;
+
+    position: relative;
+  }
+
+  header .navbar .m-nav {
+    display: flex;
+  }
+  header .navbar .m-nav > div {
+    cursor: pointer;
+  }
+
+  header .navbar .nav-button.hidden,
+  header .navbar .nav-close.hidden {
+    display: none;
+  }
+
+  header .navbar .m-nav-content {
+    width: 100%;
+    height: calc(100vh - 78px);
+    background-color: var(--white-bgc);
+    box-shadow: inset 0px 6px 6px -6px #3b3b3b52;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2000;
+
+    transition: all 0.4s;
+  }
+  header .navbar .m-nav-content.hidden {
+    left: 100%;
+
+    transition: all 0.4s;
+  }
+  header .navbar .m-nav-content > ul {
+    margin-top: 1rem;
+  }
+  header .navbar .m-nav-content li {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid var(--gray-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: bold;
+  }
+  header .navbar .nav-icon {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6em;
+  }
+  header .navbar .nav-icon > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #666;
+  }
+  header .navbar .nav-icon > div i {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #666;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* **********************导航栏********************** */

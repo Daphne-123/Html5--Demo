@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+body.overflow {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-size: var(--font-root-size);
+}
+
+/* CSS3 全局变量声明 */
+:root {
+  --black-bgc: #111111;
+  --white-bgc: #f7f7f7;
+  --gray-color: #d4d4d4;
+
+  --font-primary-color: #4d4d4d;
+  --font-secondry-color: #808080;
+  --font-white: #cccccc;
+  --font-red: #c7000b;
+
+  --font-root-size: 16px;
+  --font-h2-size: 1.9em;
+  --font-h3-size: 1.5em;
+  --font-nav-size: 0.9em;
+}
+
+.custom-container {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 1025px) {
+  .custom-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
